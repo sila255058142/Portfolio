@@ -37,7 +37,7 @@ export default defineNuxtConfig({
         },
     },
     app: {
-        baseURL: 'portfolio',
+        baseURL: '/portfolio/',
         buildAssetsDir: 'assets', // ป้องกันปัญหาโฟลเดอร์ _nuxt ที่ GitHub Pages อาจจะบล็อก
     },
 
@@ -45,5 +45,9 @@ export default defineNuxtConfig({
 
     nitro: {
         preset: 'github-pages',
+        prerender: {
+            crawlLinks: false,
+            routes: ['/404.html', '/200.html'],
+        },
     },
 });
