@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    height: auto;
+    background: linear-gradient(to bottom right, #f3e8ff, #d8b4fe, #9333ea);
+}
+[id] {
+    scroll-margin-top: 100px; /* ปรับค่าตามความสูงของ Header คุณ */
+}
+.button-main {
+    padding: 12px 24px;
+    border-radius: 4px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 10px 25px -5px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+}
