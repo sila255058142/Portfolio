@@ -36,4 +36,14 @@ export default defineNuxtConfig({
             scrollBehaviorType: 'smooth', // ทำให้เลื่อนแบบนุ่มนวลทั้งโปรเจกต์
         },
     },
+    app: {
+        baseURL: 'portfolio',
+        buildAssetsDir: 'assets', // ป้องกันปัญหาโฟลเดอร์ _nuxt ที่ GitHub Pages อาจจะบล็อก
+    },
+
+    ssr: false, // แนะนำให้ปิด SSR เป็น Single Page App (SPA) สำหรับ GitHub Pages
+
+    nitro: {
+        preset: 'github-pages',
+    },
 });
