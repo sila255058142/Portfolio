@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
   ],
   css: ["~/assets/css/main.css"],
+  app: {
+    baseURL: "/Portfolio/",
+  },
   ui: {
     colorMode: false,
   },
